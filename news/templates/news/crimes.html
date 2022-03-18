@@ -1,0 +1,22 @@
+
+
+<html>
+    <head>
+        {% load static %}
+        <script>
+            const total_crimes_category = "{{total_crimes_category|escapejs }}";
+            const month = "{{month|escapejs }}"
+        </script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="{% static 'js/donutchart.js' %}"></script>
+        <link rel='stylesheet' href="{% static 'css/charts.css' %}"></link>
+    </head>
+    <body>
+        <div id="chart_wrap">
+            <div id="chart"></div>
+        </div>
+        
+    </body>
+</html>
+
+

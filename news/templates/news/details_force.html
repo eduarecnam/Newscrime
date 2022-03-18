@@ -1,0 +1,31 @@
+
+
+<html>
+    <head>
+        {% load static %}
+
+        
+        <link rel='stylesheet' href="{% static 'css/details_force.css' %}"></link>
+        <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    </head>
+    <body>
+        <div class="card">
+            <img src="{% static 'img/police.jpg' %}" alt="Police logo" style="width:100%">
+            <h1><a href="{{force.url}}">{{force.name}}</a></h1>
+            <p class='title'>
+                {% if force.description %}
+                    {{ force.description }}
+                {% else %}
+                    There is no description available
+                {% endif %}
+            </p>
+            {% for method in force.engagement_methods %}
+                <a href="{{ method.url }}"><i class="fa fa-{{method.title}}"></i></a>
+            {% endfor %}    
+            <a href="tel:+{{force.telephone}}"><button>Call us</button></a>
+        </div>
+    </body>
+</html>
+
+

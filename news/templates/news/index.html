@@ -1,0 +1,31 @@
+
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1> Police Data </h1>
+        <h3> Data related to forces </h3>
+        <ul>
+            <li> 
+                <a href="{% url 'news:forces' %}">
+                    Table with all of the Forces
+                </a> 
+            </li>
+            <li> 
+                <a href="{% url 'news:seniors' %}">
+                    Number of seniors per force (all forces)
+                </a> 
+            </li>
+        </ul>
+        <h3> Data related to crimes </h3>
+        <ul>
+            <li> 
+                <a href="{% url 'news:crimes' %}">
+                    Crimes per category,  first last month with crimes
+                </a>
+            </li>
+        </ul>
+    </body>
+</html>
+
